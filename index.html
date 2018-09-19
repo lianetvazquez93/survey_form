@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Survey Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1 id="title">Survey Form</h1>
+    <div id="container">
+        <p id="description">
+            Let us know what you think about books answering this questions.
+        </p>
+        <form id="survey-form">
+            <!-- Name -->
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="name-label" for="name">Name: </label> 
+                </div>
+                
+                <div class="input">
+                    <input autofocus type="text" name="name" id="name" 
+                    class="input-field" placeholder="Enter your name" required/>
+                </div>
+            </div>
+            
+            <!-- Email -->
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="email-label" for="email">Email: </label>   
+                </div>
+                
+                <div class="input">
+                    <input autofocus type="email" name="email" id="email"
+                    class="input-field" placeholder="Enter your email" required/>
+                </div>
+            </div>
+            
+            <!-- Age -->
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="age">Age: </label>    
+                </div>
+                
+                <div class="input">
+                    <input type="number" name="age" id="number" min="5" max="125"
+                    class="input-field" placeholder="Age" required/>
+                </div>
+            </div>
+            
+            <!-- Radiobuttons -->
+            <div class="rowTab">
+                <div class="labels">
+                    <label for="booksAverage">Average of books that you read 
+                    per year: </label>
+                </div>
+                
+                <div class="input">
+                    <ul>
+                        <li class="radio">
+                            <label>Any<input name="radio-buttons" type="radio" 
+                            value="value1" class="Average"/></label>
+                        </li>
+                        <li class="radio">
+                            <label>1 to 5<input name="radio-buttons" type="radio" 
+                            value="value2" class="Average"/></label>
+                        </li>
+                        <li class="radio">
+                            <label>6 to 10<input name="radio-buttons" type="radio" 
+                            value="value3" class="Average"/></label>
+                        </li>
+                        <li class="radio">
+                            <label>11 to 15<input name="radio-buttons" type="radio" 
+                            value="value4" class="Average"/></label>
+                        </li>
+                        <li class="radio">
+                            <label>More than 15<input name="radio-buttons" type="radio" 
+                            value="value5" class="Average"/></label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Dropdown -->
+            <div class="rowTab">
+                <div class="labels">
+                    <label for="favoriteType">Favorite type of books: </label>
+                </div>
+                
+                <div class="input">
+                    <select id="dropdown" name="favoriteType" class="dropdown">
+                        <option disabled selected value>Select an option</option>
+                        <option value="fiction">Fiction</option>
+                        <option value="non-fiction">Non Fiction</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Checkbox -->
+            <div class="rowTab">
+                <div class="labels">
+                    <label for="favoriteGenres">Select your favorite genres: </label>
+                </div>
+
+                <div class="input">
+                    <ul id="favoriteGenres">
+                        <li class="checkbox">
+                            <label><input name="favoriteGenres" value="science-fiction"
+                            type="checkbox" class="preferences"/>Science Fiction</label>
+                        </li>
+                        <li class="checkbox">
+                            <label><input name="favoriteGenres" value="satire"
+                            type="checkbox" class="preferences"/>Satire</label>
+                        </li>
+                        <li class="checkbox">
+                            <label><input name="favoriteGenres" value="drama"
+                            type="checkbox" class="preferences"/>Drama</label>
+                        </li>
+                        <li class="checkbox">
+                            <label><input name="favoriteGenres" value="action-adventure"
+                            type="checkbox" class="preferences"/>Action and Adventure</label>
+                        </li>
+                        <li class="checkbox">
+                            <label><input name="favoriteGenres" value="romance"
+                            type="checkbox" class="preferences"/>Romance</label>
+                        </li>
+                        <li class="checkbox">
+                            <label><input name="favoriteGenres" value="mystery"
+                            type="checkbox" class="preferences"/>Mystery</label>
+                        </li>
+                        <li class="checkbox">
+                            <label><input name="favoriteGenres" value="horror"
+                            type="checkbox" class="preferences"/>Horror</label>
+                        </li>
+                        <li class="checkbox">
+                            <label><input name="favoriteGenres" value="poetry"
+                            type="checkbox" class="preferences"/>Poetry</label>
+                        </li>
+                        <li class="checkbox">
+                            <label><input name="favoriteGenres" value="series"
+                            type="checkbox" class="preferences"/>Series</label>
+                        </li>
+                        <li class="checkbox">
+                            <label><input name="favoriteGenres" value="trilogy"
+                            type="checkbox" class="preferences"/>Trilogy</label>
+                        </li>
+                        <li class="checkbox">
+                            <label><input name="favoriteGenres" value="biography"
+                            type="checkbox" class="preferences"/>Biography</label>
+                        </li>
+                        <li class="checkbox">
+                            <label><input name="favoriteGenres" value="autobiography"
+                            type="checkbox" class="preferences"/>Autobiography</label>
+                        </li>
+                        <li class="checkbox">
+                            <label><input name="favoriteGenres" value="fantasy"
+                            type="checkbox" class="preferences"/>Fantasy</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Text Area -->
+            <div class="rowTab">
+                <div class="labels">
+                    <label for="comments">Leave a comment about one or some of your 
+                    favorite books</label>
+                </div>
+
+                <div class="input">
+                    <textarea id="comments" name="comment" 
+                    placeholder="Enter your comment hier..."></textarea>
+                </div>
+            </div>
+
+            <!-- Button submit -->
+            <button id="submit" type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
